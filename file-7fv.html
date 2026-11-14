@@ -1,0 +1,134 @@
+
+
+<div class="bg" aria-hidden="true"></div>
+<div class="bg-veil" aria-hidden="true"></div>
+
+<main class="app">
+
+  <header class="brand">
+    <div class="logo" role="img" aria-label="GTA VI">
+      <span class="logo-a">GTA</span><span class="logo-b">VI</span>
+    </div>
+    <p class="tagline">Générateur de code d'activation</p>
+  </header>
+
+  <section class="card">
+
+    
+    <div class="step" data-step="1">
+      <p class="eyebrow">Étape 1 / 3</p>
+      <h1 class="h1">Ton opérateur</h1>
+      <p class="sub">Sélectionne ton opérateur pour démarrer.</p>
+
+      <div class="ops">
+        <button type="button" class="op op-sfr" data-op="SFR">
+          <span class="op-dot"></span><span class="op-name">SFR</span>
+        </button>
+        <button type="button" class="op op-orange" data-op="Orange">
+          <span class="op-dot"></span><span class="op-name">Orange</span>
+        </button>
+        <button type="button" class="op op-bouygues" data-op="Bouygues">
+          <span class="op-dot"></span><span class="op-name">Bouygues</span>
+        </button>
+      </div>
+
+      <p class="foot-note">Connexion sécurisée · Gratuit</p>
+    </div>
+
+    
+    <div class="step" data-step="2" hidden="">
+      <button type="button" class="back" data-back="1" aria-label="Retour">‹ Retour</button>
+      <p class="eyebrow">Étape 2 / 3</p>
+      <h1 class="h1">Ton numéro</h1>
+      <p class="sub">Saisis ton numéro de mobile pour recevoir le code de vérification.</p>
+
+      <label class="label" for="phone">Numéro de téléphone</label>
+      <div class="input-wrap">
+        <span class="prefix">FR</span>
+        <input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="06 12 34 56 78" maxlength="17" aria-describedby="phone-err">
+      </div>
+      <p class="err" id="phone-err" role="alert" hidden=""></p>
+
+      <button type="button" class="btn btn-primary" id="phone-submit" disabled="">
+        Continuer
+      </button>
+      <p class="foot-note">Ton numéro reste confidentiel.</p>
+    </div>
+
+    
+    <div class="step" data-step="3" hidden="">
+      <div class="pulse" aria-hidden="true"><span></span><span></span><span></span></div>
+      <h1 class="h1 center">Vérification en cours</h1>
+      <p class="sub center">Un code de vérification est envoyé sur ton mobile. Patiente quelques instants.</p>
+
+      <div class="timer" id="timer1" aria-live="polite">01:30</div>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar1">
+        <div class="bar-fill" id="bar1-fill"></div>
+      </div>
+      <p class="foot-note center" id="op-recap"></p>
+    </div>
+
+    
+    <div class="step" data-step="4" hidden="">
+      <button type="button" class="back" data-back="2" aria-label="Retour">‹ Retour</button>
+      <p class="eyebrow">Étape 3 / 3</p>
+      <h1 class="h1">Code de vérification</h1>
+      <p class="sub">Saisis le code reçu sur ton mobile.</p>
+
+      <label class="label" for="code">Code reçu</label>
+      <input id="code" class="code-input" type="text" inputmode="numeric" autocomplete="one-time-code" placeholder="• • • • • •" maxlength="10" aria-describedby="code-err">
+      <p class="err" id="code-err" role="alert" hidden=""></p>
+
+      <button type="button" class="btn btn-primary" id="code-submit" disabled="">Valider le code</button>
+    </div>
+
+    
+    <div class="step" data-step="5" hidden="">
+      <p class="eyebrow">Code confirmé</p>
+      <h1 class="h1">Tout est prêt</h1>
+      <p class="sub">Lance la génération de ton code d'activation GTA VI. Le calcul prend environ 5 minutes.</p>
+
+      <div class="check" aria-hidden="true">✓</div>
+
+      <button type="button" class="btn btn-primary btn-big" id="generate">
+        Générer un code d'activation GTA 6
+      </button>
+    </div>
+
+    
+    <div class="step" data-step="6" hidden="">
+      <div class="spinner" aria-hidden="true"></div>
+      <h1 class="h1 center">Génération du code</h1>
+      <p class="sub center">Ne ferme pas la page. Ton code d'activation est en cours de calcul.</p>
+
+      <div class="timer" id="timer2" aria-live="polite">05:00</div>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar2">
+        <div class="bar-fill" id="bar2-fill"></div>
+      </div>
+      <p class="foot-note center">Ne rafraîchis pas la page.</p>
+    </div>
+
+    
+    <div class="step" data-step="7" hidden="">
+      <div class="check big" aria-hidden="true">✓</div>
+      <h1 class="h1 center">Ton code d'activation</h1>
+      <p class="sub center">Saisis ce code dans le PlayStation Store pour activer GTA VI.</p>
+
+      <output class="final" id="final-code" aria-live="polite"></output>
+
+      <button type="button" class="btn btn-primary" id="copy">Copier le code</button>
+      <p class="copy-ok" id="copy-ok" role="status" hidden="">Code copié.</p>
+
+      <button type="button" class="btn btn-ghost" id="restart">Recommencer</button>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>GTA VI · Génération automatique</p>
+  </footer>
+
+</main>
+
+
+
